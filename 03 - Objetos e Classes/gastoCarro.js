@@ -8,12 +8,14 @@ class Carro {
         this.cor = cor;
         this.gastoMedioPorKm = gastoMedioPorKm
     }
+
+    gastoCarro(km, preco){
+        return km * this.gastoMedioPorKm * preco
+    }
 }
 
-function gastoCarro(km, preco, gastoMedioPorKm){
-    const precoFinal = gastoMedioPorKm * km * preco
-    console.log(precoFinal)
-}
+const Uno = new Carro('Fiat', 'Prata', 1/12)
+console.log((Uno.marca) + ' - ' + (Uno.cor) + ' - ' + 'R$ ' + (Uno.gastoCarro(60, 5.5)).toFixed(2))
 
-const carro1 = new Carro('fiat', 'branco', 2)
-gastoCarro(60, 5.5, 2)
+const Palio = new Carro('Fiat', 'Preto', 1/10)
+console.log((Palio.marca) + ' - ' + (Palio.cor) + ' - ' + 'R$ ' + (Palio.gastoCarro(80, 5.5)).toFixed(2))
