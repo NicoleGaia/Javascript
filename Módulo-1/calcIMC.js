@@ -1,6 +1,6 @@
 const peso = 65.5
 const altura = 1.68
-const IMC = peso / (altura * altura)
+const IMC = peso / Math.pow(altura,2) // => (altura * altura)
 
 if(IMC < 18.5){
     console.log(`IMC = ${IMC.toFixed(2)} - Abaixo do peso!`)
